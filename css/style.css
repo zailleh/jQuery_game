@@ -1,0 +1,81 @@
+
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+
+
+body {
+  background-color: rgb(64, 64, 64);
+  font-family: 'Didact Gothic', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: min-content;
+}
+
+header, footer, main {
+  grid-column: 2 span;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+header, footer {
+  background-color: black;
+}
+
+footer {
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   height: 100px;
+   width: 100%;
+   overflow: hidden;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr
+}
+
+.instructions {
+  grid-column: 2 span;
+  height: 100%;
+  color: white;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+}
+
+.red {
+  background-color: red;
+}
+
+#output {
+  background-color: white;
+  border: 2px inset grey;
+  padding: 1rem;
+  grid-row: 2 span;
+}
+
+#editor {
+  /* background-color: lightgrey; */
+  border: 2px inset grey;
+  /* border-radius: .5rem; */
+  /* padding: .5rem; */
+  height: calc( 100% - 2rem );
+}
+
+#htmlpreview {
+  /* grid-row: fill; */
+  /* background-color: lightgrey; */
+  border: 2px inset grey;
+  height: calc( 100% - 2rem );
+}
+
+.acepane {
+  height:30vh
+}

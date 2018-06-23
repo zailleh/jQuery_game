@@ -2,6 +2,9 @@
 
 $(document).ready( function() {
 
+  const winMessage = $( '.winmessage' );
+  winMessage.detach();
+
   $( "#htmlpreview" ).text( $( '#output' ).html() )
 
   var outputBackup = $("#output").clone(); // take copy of original output div
@@ -23,10 +26,29 @@ $(document).ready( function() {
 editor.renderer.$cursorLayer.element.style.opacity=0
 
   $( '#editor' ).on('keyup', function() {
-    $("#output").replaceWith(outputBackup.clone()); // Restore element with a copy of outputBackup
+
 
     const executeTypedjQuery=new Function ( editor.getValue() );
 
-    return( executeTypedjQuery() );
+    $("#output").replaceWith(outputBackup.clone()); // Restore element with a copy of outputBackup
+
+    executeTypedjQuery();
+    markWin( checkForWin(), winMessage );
   })
 });
+
+
+const checkForWin = function () {
+  return !$( '.red' ).is(":visible") //returns true when win!
+}
+
+const markWin = function( win, winMessage ){
+  console.log( win );
+  if ( typeof win === 'boolean' && win ) {
+    $( "#editor" ).addClass( 'win' );
+    $( '.acepane.js').prepend(winMessage);
+  } else {
+    $( "#editor" ).removeClass( 'win' );
+    winMessage.detach()
+  }
+}

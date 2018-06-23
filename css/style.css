@@ -185,6 +185,7 @@ main {
 
 .acepane {
   height:30vh;
+  position: relative;
 }
 
 .acepane, .output {
@@ -202,6 +203,40 @@ main {
   font-style: italic;
 }
 
+#editor.win {
+  border-color: rgb(0, 255, 64);
+}
+
+.winmessage {
+  position: absolute;
+  display: flow-root;
+  height: 40%;
+  width: 60%;
+  top: 50%;
+  left: 20%;
+  background-color: rgba(255,255,255,0.5);
+  z-index: 5;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+  font-size: 1.5em;
+  box-shadow: 3px 3px 3px rgba(0,0,0,.5);
+  border-radius: .5em;
+}
+
+
+a.btn {
+  background-color: white;
+  color: black;
+  box-shadow: 3px 3px 3px rgba(0,0,0,.5);
+  border-radius: .25em;
+  padding: .5em 1em;
+  margin: .5em auto;
+}
+
+/******************************* MEDIA QUERIES ********************************/
 
 @media (max-width: 980px) {
   main {

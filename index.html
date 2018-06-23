@@ -11,30 +11,63 @@
   <body>
     <div class="container">
       <header>
-
+        <div class="title">
+          <div class="logo"></div>
+          <div>jQuery Playground</div>
+        </div>
+        <nav>
+          <a href="http://timcaldwell.solutions/">Home</a>
+          <a href="http://timcaldwell.solutions/webdev/landing.html">More Apps</a>
+          <a href="http://timcaldwell.solutions/webdev/landing.html">Fun Stuff</a>
+        </nav>
       </header>
 
       <main>
         <div class="instructions">
-          <p>Use jQuery to hide the red box.</p>
-          <p>Hint: jQuery can hide a node using the .hide()</p>
+          <h1>
+            <span>jQuery Selectors: &nbsp;</span>
+            <small>Lesson 1 - Basic Sectors</small>
+          </h1>
+
+          <p>jQuery was designed to make JavaScript easy for those who already knew
+          HTML and CSS. As such, jQuery makes it easy to use CSS selectors to select nodes.
+        The basic syntax for using jQuery is <span class="eg">$('<span class="opt">[selector]</span>')</span>.</p>
+          <h3>Exercise:</h3>
+          <p>Use jQuery to select and hide the red box. <br />
+            Hint: jQuery can hide a node using the <span class="eg">.hide()</span> method</p>
         </div>
+
         <div class="acepane js">
-          <span>JavaScript - write your jQuere here</span>
+          <h3>JavaScript - write your jQuere here:</h3>
           <div id="editor"></div>
         </div>
-        <div id="output">
-          <div class="box red"></div>
+
+        <div class="output">
+          <h3>Output Area:</h3>
+          <div id="output">
+            <div class="box red"></div>
+          </div>
         </div>
+
         <div class="acepane html">
-          <span>HTML Preview</span>
+          <h3>HTML Preview</h3>
           <div id="htmlpreview"></div>
         </div>
-      </div>
+
       </main>
-
       <footer>
-
+        <div class="copyright">&copy; 2018 Tim Caldwell</div>
+        <div class="socialmedia">
+          <a href="https://twitter.com/TimCSolutions" target="_blank">
+            <img src="res/Twitter_Social_Icon_Circle_White.svg" alt="Follow @TimCSolutions on Twitter" />
+          </a>
+          <a href="https://github.com/zailleh" target="_blank">
+            <img src="res/GitHub-Mark-Light-64px.png" alt="See zailleh on GitHub"/>
+          </a>
+        </div>
+        <div class=""></div>
       </footer>
+    </div>
+
   </body>
 </html>

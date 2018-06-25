@@ -1,13 +1,28 @@
 // console.log( 'hello world' );
+const markWin = function( win, winMessage ){
+  console.log( win );
+  if ( typeof win === 'boolean' && win ) {
+    $( "#editor" ).addClass( 'win' );
+    $( '.acepane.js').prepend(winMessage);
+  } else {
+    $( "#editor" ).removeClass( 'win' );
+    winMessage.detach()
+  }
+}
 
 $(document).ready( function() {
 
+  var outputBackup = $( '#output' ).clone()
+
   const winMessage = $( '.winmessage' );
+  winMessage.on('mouseup', function() {
+      setTimeout( loadLesson, 1000 );
+  });
   winMessage.detach();
 
   $( "#htmlpreview" ).text( $( '#output' ).html() )
 
-  var outputBackup = $("#output").clone(); // take copy of original output div
+  // take copy of original output div
 
   // initialise ACE code editor
   var editor = ace.edit("editor");
@@ -23,7 +38,7 @@ $(document).ready( function() {
       highlightActiveLine: false,
       highlightGutterLine: false
   })
-editor.renderer.$cursorLayer.element.style.opacity=0
+  editor.renderer.$cursorLayer.element.style.opacity=0
 
   $( '#editor' ).on('keyup', function() {
 
@@ -33,22 +48,19 @@ editor.renderer.$cursorLayer.element.style.opacity=0
     $("#output").replaceWith(outputBackup.clone()); // Restore element with a copy of outputBackup
 
     executeTypedjQuery();
-    markWin( checkForWin(), winMessage );
+    markWin( checkForWin(editor.getValue()), winMessage );
   })
 });
 
 
-const checkForWin = function () {
-  return !$( '.red' ).is(":visible") //returns true when win!
-}
 
-const markWin = function( win, winMessage ){
-  console.log( win );
-  if ( typeof win === 'boolean' && win ) {
-    $( "#editor" ).addClass( 'win' );
-    $( '.acepane.js').prepend(winMessage);
-  } else {
-    $( "#editor" ).removeClass( 'win' );
-    winMessage.detach()
-  }
-}
+
+
+// jQuery can load html data!
+// $( "#result" ).load( "ajax/test.html" );
+
+// jQuery can check the current url
+// $(location).attr("href")
+
+// jQuery can load new scripts!
+// jQuery.getScript( url )

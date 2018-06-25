@@ -150,10 +150,15 @@ main {
 .box {
   width: 100px;
   height: 100px;
+  margin: .5em;
 }
 
 .red {
   background-color: red;
+}
+
+.blue {
+  background-color: blue;
 }
 
 #output {
@@ -161,11 +166,18 @@ main {
   border: 2px inset grey;
   height: calc( 100% - 1rem );
   padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 .output {
   padding: 1rem;
   grid-row: 2 span;
+}
+
+.dark {
+  color: black;
 }
 
 #editor {

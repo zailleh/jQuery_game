@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Learning Game</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../js/ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/lv3.js"></script>
+    <script src="../js/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="title">
+          <div class="logo"></div>
+          <div>jQuery Playground</div>
+        </div>
+        <nav>
+          <a href="http://timcaldwell.solutions/">Home</a>
+          <a href="http://timcaldwell.solutions/webdev/landing.html">More Apps</a>
+          <a href="http://timcaldwell.solutions/webdev/landing.html">Fun Stuff</a>
+        </nav>
+      </header>
+
+      <main>
+        <div class="instructions">
+          <h1>
+            <span>jQuery Methods: &nbsp;</span>
+            <small>Lesson 3 - "Chaining"</small>
+          </h1>
+
+          <p>Now that you've had a chance to see that selectors work just like CSS selectors with jQuery, let's make it easier to change things. In jQuery you can "chain" commands. This is because most jQuery methods return a jQuery object. Chaining means you can do <span class="eg">$('<span class="opt">.box</span>').show().hide()</span> which would show and then hide the same element.</p>
+          <h3>Exercise:</h3>
+          <p>Use jQuery to remove the red class and add the blue class to the odd numbered boxes.<br />
+            Hint: jQuery change classes with <span class="eg">.addClass()</span> and <span class="eg">.removeClass()</span> methods</p>
+        </div>
+
+        <div class="acepane js">
+          <div class="winmessage">Congratulations! You got it!<a class="btn" href="2.html">Next Level</a></div>
+          <h3>JavaScript - write your jQuere here:</h3>
+          <div id="editor"></div>
+        </div>
+
+        <div class="output">
+          <h3>Output Area:</h3>
+          <div id="output">
+            <div class="box red"></div>
+            <div class="box red"></div>
+            <div class="box red"></div>
+            <div class="box red"></div>
+            <div class="box red"></div>
+          </div>
+        </div>
+
+        <div class="acepane html">
+          <h3>HTML Preview</h3>
+          <div id="htmlpreview"></div>
+        </div>
+
+      </main>
+      <footer>
+        <div class="copyright">&copy; 2018 Tim Caldwell</div>
+        <div class="socialmedia">
+          <a href="https://twitter.com/TimCSolutions" target="_blank">
+            <img src="../res/Twitter_Social_Icon_Circle_White.svg" alt="Follow @TimCSolutions on Twitter" />
+          </a>
+          <a href="https://github.com/zailleh" target="_blank">
+            <img src="../res/GitHub-Mark-Light-64px.png" alt="See zailleh on GitHub"/>
+          </a>
+        </div>
+        <div class=""></div>
+      </footer>
+    </div>
+
+  </body>
+</html>

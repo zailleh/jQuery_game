@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>jQuery Learning Game</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="js/ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/main.js"></script>
+    <script src="../js/ace-builds-master/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/lv1.js"></script>
+    <script src="../js/main.js"></script>
   </head>
   <body>
     <div class="container">
@@ -25,25 +26,28 @@
       <main>
         <div class="instructions">
           <h1>
-            <span>Welcome to jQuery Playground</span>
+            <span>jQuery Selectors: &nbsp;</span>
+            <small>Lesson 1 - Basic Sectors</small>
           </h1>
 
-          <p>jQuery Playground is designed to help you through learning basic jQuery functionality. With each level you'll build uppon your knowledge of jQuery until, at the end, you should be proficient with basic jQuery.</p>
-          <p>This game assumes that you have an understanding of CSS Selectors. If you're not sure about CSS Selectors, check out the great CSS Selector game <a href="https://flukeout.github.io/">CSS Diner</a>.</p>
-          <br/><a class="btn" href="level/1.html">Start Game!</a>
+          <p>jQuery was designed to make JavaScript easy for those who already knew
+          HTML and CSS. As such, jQuery makes it easy to use CSS selectors to select nodes.
+        The basic syntax for using jQuery is <span class="eg">$('<span class="opt">[selector]</span>')</span>.</p>
+          <h3>Exercise:</h3>
+          <p>Use jQuery to select and hide the red box. <br />
+            Hint: jQuery can hide a node using the <span class="eg">.hide()</span> method</p>
         </div>
 
         <div class="acepane js">
+          <div class="winmessage">Congratulations! You got it!<a class="btn" href="2.html">Next Level</a></div>
           <h3>JavaScript - write your jQuere here:</h3>
-          <div id="editor">This area you'll use for typing out your JavaScript and jQuery throughout the game.
-Syntax Highlighting is provoded by Ace! 'https://ace.c9.io/'</div>
+          <div id="editor"></div>
         </div>
 
         <div class="output">
           <h3>Output Area:</h3>
-          <div id="output" class="dark"><h3 >Live update display area!</h3>
-<p>This area will display the visual element of the game and will update live as you make changes to your code.</p>
-<p> This will also be displayed inside the HTML preview pane</p>
+          <div id="output">
+            <div class="box red"></div>
           </div>
         </div>
 
@@ -57,10 +61,10 @@ Syntax Highlighting is provoded by Ace! 'https://ace.c9.io/'</div>
         <div class="copyright">&copy; 2018 Tim Caldwell</div>
         <div class="socialmedia">
           <a href="https://twitter.com/TimCSolutions" target="_blank">
-            <img src="res/Twitter_Social_Icon_Circle_White.svg" alt="Follow @TimCSolutions on Twitter" />
+            <img src="../res/Twitter_Social_Icon_Circle_White.svg" alt="Follow @TimCSolutions on Twitter" />
           </a>
           <a href="https://github.com/zailleh" target="_blank">
-            <img src="res/GitHub-Mark-Light-64px.png" alt="See zailleh on GitHub"/>
+            <img src="../res/GitHub-Mark-Light-64px.png" alt="See zailleh on GitHub"/>
           </a>
         </div>
         <div class=""></div>
